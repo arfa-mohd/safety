@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Road Safety AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3b30;
+            --primary-glow: rgba(255, 59, 48, 0.3);
+            --bg: #020617;
+            --card: rgba(15, 23, 42, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top left, #0f172a, #020617);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 440px;
+            padding: 20px;
+            perspective: 1000px;
+        }
+
+        .login-card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: white;
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .tabs {
+            display: flex;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            margin-left: 4px;
+        }
+
+        input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: white;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px var(--primary-glow);
+        }
+
+        .btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 8px 16px -4px var(--primary-glow);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px -4px var(--primary-glow);
+        }
+
+        .footer-link {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        #registerForm { display: none; }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="header">
+                <div class="logo">
+                    <img src="/api/logo" alt="Road Safety Logo" style="width:40px; height:40px; object-fit:contain; border-radius:4px;">
+                </div>
+                <h1 id="pageTitle">Welcome Back</h1>
+                <p class="subtitle" id="pageSub">Road Safety Artificial Intelligence</p>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" onclick="switchMode('login')">Login</div>
+                <div class="tab" onclick="switchMode('register')">Register</div>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Account Type</label>
+                    <select id="loginRole" style="width:100%; background:rgba(0,0,0,0.2); border:1px solid var(--border); border-radius:12px; padding:12px 16px; color:white; font-size:15px; font-family:inherit;">
+                        <option value="public">Public Reporter</option>
+                        <option value="govt">Government Authority</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+
+            <form id="registerForm" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="regEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="regMobile" placeholder="9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="regPass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+
+            <div class="footer-link">
+                <span id="footerText">Don't have an account?</span>
+                <a href="#" onclick="toggleMode()" id="toggleBtn">Create one</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script>
+        let mode = 'login';
+
+        function switchMode(newMode) {
+            mode = newMode;
+            const loginForm = document.getElementById('loginForm');
+            const regForm = document.getElementById('registerForm');
+            const tabs = document.querySelectorAll('.tab');
+            const title = document.getElementById('pageTitle');
+            const sub = document.getElementById('pageSub');
+            const footerText = document.getElementById('footerText');
+            const toggleBtn = document.getElementById('toggleBtn');
+
+            if (mode === 'login') {
+                loginForm.style.display = 'block';
+                regForm.style.display = 'none';
+                tabs[0].classList.add('active');
+                tabs[1].classList.remove('active');
+                title.textContent = 'Welcome Back';
+                sub.textContent = 'Sign in to your road safety account';
+                footerText.textContent = "Don't have an account? ";
+                toggleBtn.textContent = 'Create one';
+            } else {
+                loginForm.style.display = 'none';
+                regForm.style.display = 'block';
+                tabs[1].classList.add('active');
+                tabs[0].classList.remove('active');
+                title.textContent = 'New Account';
+                sub.textContent = 'Join the road safety reporting network';
+                footerText.textContent = 'Already have an account? ';
+                toggleBtn.textContent = 'Sign in';
+            }
+        }
+
+        function toggleMode() {
+            switchMode(mode === 'login' ? 'register' : 'login');
+        }
+
+
+
+        function showToast(msg, color = '#ef4444') {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.style.background = color;
+            t.style.display = 'block';
+            setTimeout(() => t.style.display = 'none', 3000);
+        }
+
+        async function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const pass = document.getElementById('loginPass').value;
+            const role = document.getElementById('loginRole').value;
+
+            try {
+                const r = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, pass, role })
+                });
+                const d = await r.json();
+                if (d.success) {
+                    showToast('Login successful!', '#22c55e');
+                    setTimeout(() => window.location.href = '/', 500);
+                } else {
+                    showToast(d.error || 'Invalid credentials');
+                }
+            } catch (err) {
+                showToast('Server connection failed');
+            }
+        }
+
+        async function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const mobile = document.getElementById('regMobile').value;
+            const pass = document.getElementById('regPass').value;
+
+            try {
+                const r = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, mobile, pass })
+                });
+                const d = await r.json();
+                if (d.success) {
+                    showToast('Registration complete! Signing in...', '#22c55e');
+                    setTimeout(() => handleLogin({ preventDefault: () => {}, target: { email, pass, role: 'public' } }), 1000);
+                    // Manual call to login or switch to login tab
+                    document.getElementById('loginEmail').value = email;
+                    document.getElementById('loginPass').value = pass;
+                    document.getElementById('loginRole').value = 'public';
+                    switchMode('login');
+                } else {
+                    showToast(d.error || 'Registration failed');
+                }
+            } catch (err) {
+                showToast('Server connection failed');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt Authority | Smart Intelligence Console</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-color: #0a0505;
+            --glass-bg: rgba(25, 10, 10, 0.6);
+            --glass-border: rgba(255, 50, 50, 0.15);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            --primary: #ef4444;
+            --primary-glow: rgba(239, 68, 68, 0.4);
+            --accent: #dc2626;
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.4);
+            --warning: #f59e0b;
+            --danger: #b91c1c;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0a0505, #1f0505, #140303);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+
+        /* GLASSMORPHISM UTILS */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .glass-btn {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .glass-btn:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .glass-btn.primary {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border: none;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .glass-btn.primary:hover {
+            box-shadow: 0 6px 20px var(--primary-glow);
+        }
+
+        .glass-btn.success {
+            background: linear-gradient(45deg, var(--success), #059669);
+            border: none;
+            box-shadow: 0 4px 15px var(--success-glow);
+        }
+
+        /* LAYOUT */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid var(--glass-border);
+            background: rgba(2, 6, 23, 0.7);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .brand-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .nav-item:hover {
+            color: var(--text-main);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+
+        .nav-item.active {
+            color: #fff;
+            background: linear-gradient(90deg, rgba(14,165,233,0.15) 0%, transparent 100%);
+            border-left: 3px solid var(--primary);
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .user-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255,255,255,0.02);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--glass-border);
+        }
+
+        /* MAIN AREA */
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            position: relative;
+        }
+
+        .topbar {
+            height: 80px;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(180deg, rgba(2,6,23,0.8) 0%, transparent 100%);
+            z-index: 10;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 0 40px 40px;
+            overflow-y: auto;
+        }
+
+        /* GRID LAYOUTS */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 24px;
+        }
+
+        /* CARDS */
+        .widget {
+            padding: 24px;
+        }
+        
+        .widget-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .widget-title i { color: var(--primary); }
+
+        /* REPORT CARDS */
+        .report-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+        }
+
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--warning);
+        }
+
+        .report-card.status-fixed::before { background: var(--success); }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .reporter-info h4 { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+        .reporter-info p { font-size: 12px; color: var(--text-muted); }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .badge.pending { background: rgba(245,158,11,0.1); color: var(--warning); border: 1px solid var(--warning); }
+        .badge.fixed { background: rgba(16,185,129,0.1); color: var(--success); border: 1px solid var(--success); }
+        .badge.confirmed { background: rgba(14,165,233,0.1); color: var(--primary); border: 1px solid var(--primary); }
+
+        .report-data-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            padding: 16px;
+            background: rgba(0,0,0,0.2);
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+        }
+
+        .data-point .lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+        .data-point .val { font-size: 18px; font-weight: 700; color: #fff; font-family: 'Space Grotesk', sans-serif; }
+        
+        .gallery {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .gallery img {
+            height: 80px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            transition: 0.3s;
+        }
+        
+        .gallery img:hover { transform: scale(1.05); border-color: var(--primary); }
+
+        .report-actions {
+            display: flex;
+            gap: 12px;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 16px;
+        }
+
+        .inp {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--glass-border);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            outline: none;
+            font-family: inherit;
+        }
+        
+        .inp:focus { border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary-glow); }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand" style="display:flex; align-items:center; gap:16px; margin-bottom:40px; padding:0 10px;">
+            <i data-lucide="landmark" style="color:var(--primary); width:42px; height:42px; filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.5));"></i>
+            <div class="brand-text">
+                <h1 style="font-size:16px; font-weight:800; letter-spacing:1px; color:#fff; text-transform:uppercase; margin-bottom:4px;">Govt of Tamil Nadu</h1>
+                <p style="font-size:10px; color:var(--primary); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Dept of Highways</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a class="nav-item active" onclick="switchPage('terminal')">
+                <i data-lucide="activity"></i> Command Terminal
+            </a>
+            <a class="nav-item" onclick="switchPage('audit')">
+                <i data-lucide="file-check-2"></i> Audit Ledger
+            </a>
+            <a class="nav-item" onclick="switchPage('geo')">
+                <i data-lucide="map"></i> Geo-Intelligence
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-card">
+                <div style="width:36px;height:36px;border-radius:8px;background:var(--primary);display:flex;align-items:center;justify-content:center;box-shadow:0 0 15px var(--primary-glow)">
+                    <i data-lucide="user" style="color:#fff;width:20px;height:20px"></i>
+                </div>
+                <div>
+                    <div style="font-size:13px;font-weight:600;color:#fff">{{ user.name }}</div>
+                    <div style="font-size:11px;color:var(--text-muted)">{{ user.email }}</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div>
+                <h2 style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700">Central Intelligence Dashboard</h2>
+                <p style="font-size:12px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px">Real-time infrastructure oversight</p>
+            </div>
+            <div style="display:flex; gap:16px">
+                <button class="glass-btn" onclick="loadGovtReports()"><i data-lucide="refresh-cw" style="width:16px;height:16px"></i> Refresh Node</button>
+                <button class="glass-btn" style="color:var(--danger); border-color:rgba(239,68,68,0.3)" onclick="window.location.href='/logout'">
+                    <i data-lucide="log-out" style="width:16px;height:16px"></i> Terminate
+                </button>
+            </div>
+        </header>
+
+        <main class="content-area">
+            
+            <!-- TERMINAL PAGE -->
+            <section id="terminalPage" class="page-section" style="display:block">
+                <div class="dashboard-grid">
+                    
+                    <div class="glass-panel widget">
+                        <div class="widget-title">
+                            <i data-lucide="radio"></i> Live Field Reports
+                            <div style="margin-left:auto; display:flex; gap:12px">
+                                <input type="text" id="reportSearchInp" class="inp" placeholder="Filter Intel (Name, Email, ID)..." style="width:220px; padding:6px 12px; font-size:12px" onkeyup="filterReports()">
+                            </div>
+                        </div>
+                        
+                        <div id="govtReportsList">
+                            <div style="padding:40px; text-align:center; color:var(--text-muted)">
+                                <i data-lucide="loader" class="pulse" style="margin-bottom:16px; width:32px; height:32px"></i>
+                                <p>Syncing with field nodes...</p>
+                            </div>
+                        </div>
+                        
+                        <div id="paginationControls" style="display:none; justify-content:center; gap:16px; margin-top:24px">
+                            <button id="prevPageBtn" class="glass-btn">← Prev</button>
+                            <span id="pageInfo" style="padding:10px 16px; background:rgba(0,0,0,0.3); border-radius:8px; font-size:12px; font-family:'Space Grotesk',sans-serif"></span>
+                            <button id="nextPageBtn" class="glass-btn">Next →</button>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:24px">
+                        <div class="glass-panel widget">
+                            <div class="widget-title"><i data-lucide="bar-chart-2"></i> Anomaly Detections</div>
+                            <div style="height:200px; position:relative"><canvas id="uploadsLineChart"></canvas></div>
+                        </div>
+                        <div class="glass-panel widget">
+                            <div class="widget-title"><i data-lucide="pie-chart"></i> Resolution Metric</div>
+                            <div style="height:200px; position:relative"><canvas id="fixStatusBarChart"></canvas></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- AUDIT PAGE -->
+            <section id="auditPage" class="page-section" style="display:none">
+                <div class="glass-panel widget">
+                    <div class="widget-title"><i data-lucide="file-check-2"></i> Verified Infrastructure Ledger</div>
+                    <div style="overflow-x:auto">
+                        <table style="width:100%; border-collapse:collapse; text-align:left">
+                            <thead>
+                                <tr style="border-bottom:1px solid var(--glass-border); color:var(--text-muted); font-size:11px; text-transform:uppercase; letter-spacing:1px">
+                                    <th style="padding:16px">ID</th>
+                                    <th style="padding:16px">Reporter</th>
+                                    <th style="padding:16px">Audit Notes</th>
+                                    <th style="padding:16px">Status</th>
+                                    <th style="padding:16px">Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="auditStreamBody"></tbody>
+                        </table>
+                        <div id="auditEmpty" style="padding:40px; text-align:center; color:var(--text-muted); display:none">
+                            <p>Ledger is currently empty.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GEO PAGE -->
+            <section id="geoPage" class="page-section" style="display:none">
+                <div class="glass-panel widget" style="height: calc(100vh - 120px); display:flex; flex-direction:column">
+                    <div class="widget-title" style="justify-content:space-between">
+                        <span style="display:flex; align-items:center; gap:8px"><i data-lucide="map"></i> Geo-Spatial Intel</span>
+                        <div style="display:flex; gap:12px">
+                            <input type="text" id="mapSearchInp" class="inp" placeholder="Target Coordinates..." onkeydown="if(event.key==='Enter') searchMapLocation()">
+                            <button class="glass-btn" onclick="searchMapLocation()"><i data-lucide="search" style="width:14px;height:14px"></i> Search</button>
+                            <button class="glass-btn primary" onclick="syncMapToMyLocation()"><i data-lucide="target" style="width:14px;height:14px"></i> Target Lock</button>
+                        </div>
+                    </div>
+                    <div style="flex:1; border-radius:12px; overflow:hidden; border:1px solid var(--glass-border); position:relative">
+                        <iframe id="geoMapFrame" width="100%" height="100%" frameborder="0"
+                            src="https://maps.google.com/maps?q=11.0168,76.9558&t=k&z=12&ie=UTF8&iwloc=&output=embed"
+                            style="filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(120%) sepia(20%) !important; opacity:0.9">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        let currentPage = 1, totalPages = 1;
+        let lineChart = null, barChart = null;
+
+        function filterReports() {
+            const q = document.getElementById('reportSearchInp').value.toLowerCase();
+            document.querySelectorAll('.report-card').forEach(c => {
+                c.style.display = c.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+            });
+        }
+
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(pageId + 'Page').style.display = 'block';
+            event.currentTarget.classList.add('active');
+
+            if (pageId === 'audit') loadAuditStream();
+        }
+
+        async function loadGovtReports(page = 1) {
+            const container = document.getElementById('govtReportsList');
+            container.innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted)"><i data-lucide="loader" class="pulse" style="margin-bottom:16px; width:32px; height:32px"></i><p>Syncing with field nodes...</p></div>';
+            lucide.createIcons();
+            
+            try {
+                const r = await fetch(`/govt/reports/data?page=${page}`);
+                const data = await r.json();
+                
+                if (!data.reports.length) {
+                    container.innerHTML = '<div style="padding:40px; text-align:center; color:var(--text-muted)"><p>No anomalies detected. Sector secure.</p></div>';
+                    return;
+                }
+
+                currentPage = data.page;
+                totalPages = Math.ceil(data.total / data.per_page);
+                document.getElementById('paginationControls').style.display = totalPages > 1 ? 'flex' : 'none';
+                document.getElementById('pageInfo').innerText = `NODE ${currentPage} / ${totalPages}`;
+
+                container.innerHTML = data.reports.map(rep => {
+                    const status = (rep.status || 'pending').toLowerCase();
+                    const cStatus = (rep.govt_confirmation || 'pending').toLowerCase();
+                    const isFixed = status === 'fixed';
+                    
+                    const imgs = JSON.parse(rep.image_paths || '[]');
+                    const imgHTML = imgs.length ? `<div class="gallery">${imgs.map(p => `<img src="/api/image/${p.split('/').pop()}" onerror="this.style.display='none'">`).join('')}</div>` : '';
+                    const mapEmbed = (rep.latitude && rep.longitude) ? `<div style="height:150px; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.05); margin-bottom:16px"><iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=${rep.latitude},${rep.longitude}&t=k&z=15&ie=UTF8&iwloc=&output=embed" style="filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(120%) sepia(20%) !important; opacity:0.9"></iframe></div>` : '';
+                    
+                    return `
+                    <div class="report-card ${isFixed ? 'status-fixed' : ''}">
+                        <div class="report-header">
+                            <div class="reporter-info">
+                                <h4>${rep.user_name || 'Ghost Protocol'}</h4>
+                                <p>${rep.user_email || 'No Relay'} &nbsp;&bull;&nbsp; Intel #${rep.id} &nbsp;&bull;&nbsp; ${rep.date_time}</p>
+                            </div>
+                            <div style="display:flex; gap:8px">
+                                <span class="badge ${cStatus}">${cStatus}</span>
+                                <span class="badge ${isFixed ? 'fixed' : 'pending'}">${status}</span>
+                            </div>
+                        </div>
+
+                        <div class="report-data-grid">
+                            <div class="data-point"><div class="lbl">Anomalies</div><div class="val" style="color:var(--primary)">${rep.pothole_count}</div></div>
+                            <div class="data-point"><div class="lbl">Confidence</div><div class="val">${((rep.confidence||0)*100).toFixed(0)}%</div></div>
+                            <div class="data-point"><div class="lbl">Lat</div><div class="val" style="font-size:14px; margin-top:4px">${rep.latitude||'--'}</div></div>
+                            <div class="data-point"><div class="lbl">Lng</div><div class="val" style="font-size:14px; margin-top:4px">${rep.longitude||'--'}</div></div>
+                        </div>
+
+                        <div style="margin-bottom:16px; font-size:13px; color:var(--text-muted)">
+                            <i data-lucide="map-pin" style="width:14px;height:14px; display:inline-block; vertical-align:-2px"></i> 
+                            ${rep.address || 'Unknown Sector'}
+                        </div>
+
+                        ${imgHTML}
+                        ${mapEmbed}
+
+                        <div class="report-actions">
+                            ${(rep.latitude && rep.longitude) ? `<button class="glass-btn" onclick="viewOnGeoMap('${rep.latitude}', '${rep.longitude}')"><i data-lucide="map" style="width:14px;height:14px"></i> Open Map</button>` : ''}
+                            ${rep.pdf_path ? `<button class="glass-btn" onclick="downloadReport(this.dataset.path)" data-path="${rep.pdf_path}"><i data-lucide="file-down" style="width:14px;height:14px"></i> Get Intel PDF</button>` : ''}
+                            <button class="glass-btn primary" onclick="showConfirmationModal(${rep.id})"><i data-lucide="shield-check" style="width:14px;height:14px"></i> Confirm Intel</button>
+                            <button class="glass-btn ${isFixed ? '' : 'success'}" onclick="updateStatus(${rep.id}, '${isFixed ? 'pending' : 'fixed'}')">
+                                <i data-lucide="${isFixed ? 'rotate-ccw' : 'check-circle'}" style="width:14px;height:14px"></i> ${isFixed ? 'Revert Status' : 'Mark Resolved'}
+                            </button>
+                        </div>
+                    </div>`;
+                }).join('');
+                
+                lucide.createIcons();
+                setTimeout(renderGovtCharts, 100);
+
+                // Auto-center the Geo-Spatial Intel map on the first available report location if any
+                const firstLoc = data.reports.find(r => r.latitude && r.longitude);
+                if (firstLoc) {
+                    const currentSrc = document.getElementById('geoMapFrame').src;
+                    if(currentSrc.includes('11.0168,76.9558')) {
+                        document.getElementById('geoMapFrame').src = `https://maps.google.com/maps?q=${firstLoc.latitude},${firstLoc.longitude}&t=k&z=14&ie=UTF8&iwloc=&output=embed`;
+                    }
+                }
+            } catch(e) { console.error(e); }
+        }
+
+        async function renderGovtCharts() {
+            try {
+                const [ur, sr] = await Promise.all([fetch('/api/govt/charts/uploads_over_time'), fetch('/api/govt/charts/fix_status')]);
+                const uData = await ur.json();
+                const sData = await sr.json();
+
+                if(lineChart) lineChart.destroy();
+                if(barChart) barChart.destroy();
+
+                Chart.defaults.color = '#94a3b8';
+                Chart.defaults.font.family = "'Space Grotesk', sans-serif";
+
+                lineChart = new Chart(document.getElementById('uploadsLineChart'), {
+                    type: 'line',
+                    data: {
+                        labels: uData.labels,
+                        datasets: [{
+                            data: uData.values,
+                            borderColor: '#0ea5e9', backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                            borderWidth: 2, fill: true, tension: 0.4, pointRadius: 0
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x:{grid:{display:false, color:'rgba(255,255,255,0.05)'}}, y:{grid:{color:'rgba(255,255,255,0.05)'}, beginAtZero:true} } }
+                });
+
+                barChart = new Chart(document.getElementById('fixStatusBarChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Pending', 'Resolved'],
+                        datasets: [{
+                            data: [sData.pending, sData.fixed],
+                            backgroundColor: ['#f59e0b', '#10b981'],
+                            borderWidth: 0, hoverOffset: 4
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { position: 'right' } } }
+                });
+            } catch(e) {}
+        }
+
+        async function updateStatus(id, status) {
+            await fetch('/api/govt/report_status', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({report_id:id, status}) });
+            loadGovtReports(currentPage);
+        }
+
+        function showConfirmationModal(id) {
+            const notes = prompt('Enter official audit notes for this intel:');
+            if(notes !== null) {
+                fetch('/api/govt/confirm_report', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({report_id:id, confirmation:'confirmed', notes}) })
+                .then(()=>loadGovtReports(currentPage));
+            }
+        }
+
+        function downloadReport(path) {
+            const uuid = path.match(/report_([a-f0-9\-]+)\.pdf/i)?.[1];
+            if (uuid) window.open(`/api/report/${uuid}`);
+        }
+
+        async function loadAuditStream() {
+            const body = document.getElementById('auditStreamBody');
+            const empty = document.getElementById('auditEmpty');
+            try {
+                const r = await fetch('/api/govt/reports');
+                const data = await r.json();
+                if(data && data.length) {
+                    empty.style.display = 'none';
+                    body.innerHTML = data.map(rep => `
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05)">
+                            <td style="padding:16px; font-weight:600; color:var(--primary)">#${rep.id}</td>
+                            <td style="padding:16px"><div style="font-weight:500">${rep.user_name}</div><div style="font-size:11px;color:var(--text-muted)">${rep.user_email}</div></td>
+                            <td style="padding:16px; font-size:13px; color:var(--text-muted)">${rep.govt_notes || '—'}</td>
+                            <td style="padding:16px"><span class="badge ${rep.status||'pending'}">${rep.status||'pending'}</span></td>
+                            <td style="padding:16px; font-size:12px; color:var(--text-muted)">${rep.date_time}</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    empty.style.display = 'block'; body.innerHTML = '';
+                }
+            } catch(e){}
+        }
+
+        function searchMapLocation() {
+            const q = document.getElementById('mapSearchInp').value;
+            if(q) document.getElementById('geoMapFrame').src = `https://maps.google.com/maps?q=${encodeURIComponent(q)}&t=k&z=15&ie=UTF8&iwloc=&output=embed`;
+        }
+
+        function viewOnGeoMap(lat, lng) {
+            document.getElementById('geoMapFrame').src = `https://maps.google.com/maps?q=${lat},${lng}&t=k&z=16&ie=UTF8&iwloc=&output=embed`;
+            switchPage('geo');
+        }
+
+        function syncMapToMyLocation() {
+            navigator.geolocation.getCurrentPosition(pos => {
+                document.getElementById('geoMapFrame').src = `https://maps.google.com/maps?q=${pos.coords.latitude},${pos.coords.longitude}&t=k&z=16&ie=UTF8&iwloc=&output=embed`;
+            }, err => alert('Location denied.'), { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            document.getElementById('prevPageBtn').onclick = () => loadGovtReports(currentPage - 1);
+            document.getElementById('nextPageBtn').onclick = () => loadGovtReports(currentPage + 1);
+            loadGovtReports();
+        });
+    </script>
+</body>
+</html>

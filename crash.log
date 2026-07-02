@@ -1,0 +1,255 @@
+2026-05-31 15:16:24,244 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:16:24,278 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:16:24,284 DEBUG matplotlib interactive is False
+2026-05-31 15:16:24,285 DEBUG matplotlib platform is win32
+2026-05-31 15:16:24,431 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:16:24,438 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:16:31,015 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 15:16:31,073 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8082
+ * Running on https://10.147.57.190:8082
+2026-05-31 15:16:31,073 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 15:18:04,844 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:18:04,919 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:18:04,925 DEBUG matplotlib interactive is False
+2026-05-31 15:18:04,926 DEBUG matplotlib platform is win32
+2026-05-31 15:18:05,147 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:18:05,154 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:18:14,020 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8083
+ * Running on https://10.147.57.190:8083
+2026-05-31 15:18:14,020 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 15:18:14,021 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:18:23,505 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:18:23,543 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:18:23,546 DEBUG matplotlib interactive is False
+2026-05-31 15:18:23,547 DEBUG matplotlib platform is win32
+2026-05-31 15:18:23,716 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:18:23,723 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:18:31,065 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:18:31,083 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:19:36,698 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:19:36,700 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:19:39,922 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:19:49,471 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:19:49,505 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:19:49,509 DEBUG matplotlib interactive is False
+2026-05-31 15:19:49,509 DEBUG matplotlib platform is win32
+2026-05-31 15:19:49,663 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:19:49,672 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:19:56,174 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:19:56,189 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:20:00,263 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:20:00,314 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:20:00,318 DEBUG matplotlib interactive is False
+2026-05-31 15:20:00,318 DEBUG matplotlib platform is win32
+2026-05-31 15:20:00,524 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:20:00,531 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:20:07,305 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 15:20:07,364 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8082
+ * Running on https://10.147.57.190:8082
+2026-05-31 15:20:07,364 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 15:20:57,899 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:20:57,900 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:21:01,514 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:21:12,659 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:21:12,700 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:21:12,703 DEBUG matplotlib interactive is False
+2026-05-31 15:21:12,703 DEBUG matplotlib platform is win32
+2026-05-31 15:21:12,866 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:21:12,874 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:21:19,204 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:21:19,224 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:21:23,724 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:21:23,757 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:21:23,760 DEBUG matplotlib interactive is False
+2026-05-31 15:21:23,760 DEBUG matplotlib platform is win32
+2026-05-31 15:21:23,903 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:21:23,911 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:21:37,362 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 15:21:37,407 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-05-31 15:21:37,407 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 15:27:33,239 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\optparse.py', reloading
+2026-05-31 15:27:35,206 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:27:46,041 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:27:46,082 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:27:46,086 DEBUG matplotlib interactive is False
+2026-05-31 15:27:46,087 DEBUG matplotlib platform is win32
+2026-05-31 15:27:46,281 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:27:46,291 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:27:55,623 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:27:55,663 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:28:34,563 INFO werkzeug  * Detected change in 'C:\\Users\\user\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyngrok\\ngrok.py', reloading
+2026-05-31 15:28:34,597 INFO werkzeug  * Detected change in 'C:\\Users\\user\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\pyngrok\\process.py', reloading
+2026-05-31 15:28:37,068 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:28:44,196 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:28:44,231 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:28:44,234 DEBUG matplotlib interactive is False
+2026-05-31 15:28:44,234 DEBUG matplotlib platform is win32
+2026-05-31 15:28:44,369 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:28:44,375 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:28:50,392 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:28:50,413 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:35:00,848 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:35:00,851 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:35:03,958 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:35:13,553 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:35:13,595 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:35:13,598 DEBUG matplotlib interactive is False
+2026-05-31 15:35:13,599 DEBUG matplotlib platform is win32
+2026-05-31 15:35:13,808 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:35:13,817 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:35:25,023 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:35:25,039 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:36:07,396 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:36:07,397 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 15:36:10,290 INFO werkzeug  * Restarting with watchdog (windowsapi)
+2026-05-31 15:36:17,296 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:36:17,330 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:36:17,334 DEBUG matplotlib interactive is False
+2026-05-31 15:36:17,334 DEBUG matplotlib platform is win32
+2026-05-31 15:36:17,491 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:36:17,498 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:36:23,107 WARNING werkzeug  * Debugger is active!
+2026-05-31 15:36:23,123 INFO werkzeug  * Debugger PIN: 352-612-370
+2026-05-31 15:36:34,900 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 15:36:34,926 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 15:36:34,931 DEBUG matplotlib interactive is False
+2026-05-31 15:36:34,931 DEBUG matplotlib platform is win32
+2026-05-31 15:36:35,073 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 15:36:35,084 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 15:36:42,379 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 15:36:42,413 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-05-31 15:36:42,414 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 17:47:45,112 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\__init__.py', reloading
+2026-05-31 17:47:45,136 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\aliases.py', reloading
+2026-05-31 17:47:45,143 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8.py', reloading
+2026-05-31 17:47:45,145 INFO werkzeug  * Detected change in 'C:\\safety\\app.py', reloading
+2026-05-31 17:47:45,147 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\cp1252.py', reloading
+2026-05-31 17:47:45,151 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\utf_8_sig.py', reloading
+2026-05-31 17:47:45,154 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\types.py', reloading
+2026-05-31 17:47:45,156 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\__init__.py', reloading
+2026-05-31 17:47:45,159 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\importlib\\_abc.py', reloading
+2026-05-31 17:47:45,213 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\warnings.py', reloading
+2026-05-31 17:47:45,234 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\enum.py', reloading
+2026-05-31 17:47:45,243 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\functools.py', reloading
+2026-05-31 17:47:45,251 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\collections\\__init__.py', reloading
+2026-05-31 17:47:45,256 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\keyword.py', reloading
+2026-05-31 17:47:45,262 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\operator.py', reloading
+2026-05-31 17:47:45,269 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\reprlib.py', reloading
+2026-05-31 17:47:45,345 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\datetime.py', reloading
+2026-05-31 17:47:45,366 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\contextvars.py', reloading
+2026-05-31 17:47:45,404 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\inspect.py', reloading
+2026-05-31 17:47:45,415 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\ast.py', reloading
+2026-05-31 17:47:45,423 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\re\\__init__.py', reloading
+2026-05-31 17:47:45,433 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\re\\_compiler.py', reloading
+2026-05-31 17:47:45,439 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\re\\_parser.py', reloading
+2026-05-31 17:47:45,446 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\re\\_constants.py', reloading
+2026-05-31 17:47:45,449 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\re\\_casefix.py', reloading
+2026-05-31 17:47:45,452 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\copyreg.py', reloading
+2026-05-31 17:47:45,465 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\contextlib.py', reloading
+2026-05-31 17:47:45,483 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\dis.py', reloading
+2026-05-31 17:47:45,489 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\opcode.py', reloading
+2026-05-31 17:47:45,499 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\_opcode_metadata.py', reloading
+2026-05-31 17:47:45,511 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\linecache.py', reloading
+2026-05-31 17:47:45,517 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\tokenize.py', reloading
+2026-05-31 17:47:45,522 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\token.py', reloading
+2026-05-31 17:47:45,535 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\weakref.py', reloading
+2026-05-31 17:47:45,544 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\_weakrefset.py', reloading
+2026-05-31 17:47:45,594 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\numbers.py', reloading
+2026-05-31 17:47:45,640 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\pickle.py', reloading
+2026-05-31 17:47:45,651 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\struct.py', reloading
+2026-05-31 17:47:45,666 INFO werkzeug  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\\Lib\\_compat_pickle.py', reloading
+2026-05-31 17:47:56,693 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 17:47:56,750 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 17:47:56,753 DEBUG matplotlib interactive is False
+2026-05-31 17:47:56,754 DEBUG matplotlib platform is win32
+2026-05-31 17:47:56,955 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 17:47:56,962 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 17:48:09,537 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 17:48:09,583 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-05-31 17:48:09,584 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 17:49:36,477 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 17:49:36,519 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 17:49:36,526 DEBUG matplotlib interactive is False
+2026-05-31 17:49:36,527 DEBUG matplotlib platform is win32
+2026-05-31 17:49:36,707 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 17:49:36,714 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 17:49:47,062 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 17:49:47,127 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-05-31 17:49:47,128 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 17:50:57,515 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 17:50:57,551 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 17:50:57,554 DEBUG matplotlib interactive is False
+2026-05-31 17:50:57,555 DEBUG matplotlib platform is win32
+2026-05-31 17:50:57,720 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 17:50:57,728 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 17:51:06,093 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 17:51:06,144 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8082
+ * Running on https://10.147.57.190:8082
+2026-05-31 17:51:06,145 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 17:53:31,370 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 17:53:31,398 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 17:53:31,401 DEBUG matplotlib interactive is False
+2026-05-31 17:53:31,401 DEBUG matplotlib platform is win32
+2026-05-31 17:53:31,556 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 17:53:31,564 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 17:53:38,583 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 17:53:38,683 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:8082
+ * Running on https://10.147.57.190:8082
+2026-05-31 17:53:38,683 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-05-31 17:55:34,607 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-05-31 17:55:34,643 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-05-31 17:55:34,647 DEBUG matplotlib interactive is False
+2026-05-31 17:55:34,647 DEBUG matplotlib platform is win32
+2026-05-31 17:55:34,810 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-05-31 17:55:34,818 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-05-31 17:55:43,904 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-05-31 17:55:43,949 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-05-31 17:55:43,950 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-06-01 10:15:56,209 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-06-01 10:15:56,271 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-06-01 10:15:56,276 DEBUG matplotlib interactive is False
+2026-06-01 10:15:56,276 DEBUG matplotlib platform is win32
+2026-06-01 10:15:56,529 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-06-01 10:15:56,547 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-06-01 10:16:06,543 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-06-01 10:16:06,543 INFO werkzeug [33mPress CTRL+C to quit[0m
+2026-06-01 10:17:03,335 DEBUG matplotlib matplotlib data path: C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\matplotlib\mpl-data
+2026-06-01 10:17:03,373 DEBUG matplotlib CONFIGDIR=C:\Users\user\.matplotlib
+2026-06-01 10:17:03,377 DEBUG matplotlib interactive is False
+2026-06-01 10:17:03,377 DEBUG matplotlib platform is win32
+2026-06-01 10:17:03,550 DEBUG matplotlib CACHEDIR=C:\Users\user\.matplotlib
+2026-06-01 10:17:03,557 DEBUG matplotlib.font_manager Using fontManager instance from C:\Users\user\.matplotlib\fontlist-v390.json
+2026-06-01 10:17:10,587 WARNING werkzeug Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2026-06-01 10:17:10,630 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8082
+ * Running on http://10.147.57.190:8082
+2026-06-01 10:17:10,630 INFO werkzeug [33mPress CTRL+C to quit[0m
